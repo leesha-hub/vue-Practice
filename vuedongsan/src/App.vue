@@ -1,5 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  
+  <div class="menu">
+    <a v-for="(a,i) in 메뉴들" :key="a">{{ a }}{{ i }}</a>
+    <!-- <a>Products</a> -->
+    <!-- <a>About</a> -->
+  </div>
+
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   <div>
     원룸샵
     <h4>{{products.at(0)}}</h4>
@@ -25,7 +32,8 @@ export default {
       price1 : 60,
       price2 : 70,
       //스타일 : 'color:blue',
-      products : ['역삼동원룸','천호동원룸','마포구원룸']
+      products : ['역삼동원룸','천호동원룸','마포구원룸'],
+      메뉴들 : ['Home','Shop','About']
     }
   },
   components: {
@@ -40,6 +48,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
+
+.menu {
+  background: darkslateblue;
+  padding: 15px;
+  border-radius: 5px;
+}
+.menu a {
+  color : white;
+  padding : 10px;
+}
+
 </style>
