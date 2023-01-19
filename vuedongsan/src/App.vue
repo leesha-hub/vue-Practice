@@ -7,6 +7,14 @@
   </div>
 
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <div v-for="(b,i) in products" :key="b">
+    <h4>{{b}}</h4>
+    <!-- <h4 class="red" :style="스타일">xx 원룸</h4> -->
+    <p>{{i}} 만원</p>
+  </div>
+
+  <input type="text" value="===================================">
+  
   <div>
     원룸샵
     <h4>{{products.at(0)}}</h4>
