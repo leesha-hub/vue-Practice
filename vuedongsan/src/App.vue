@@ -29,9 +29,11 @@
   
   <div>
     <img src="./assets/room0.jpg" class="room-img">
-    <h4 @click="모달창열렸니 = true">{{products.at(0)}}</h4>
+    <h4>{{ 원룸들[0].title }}</h4>
+    <p>{{ 원룸들[0].price }}원</p>
+    <!-- <h4 @click="모달창열렸니 = true">{{products.at(0)}}</h4> -->
     <!-- <h4 class="red" :style="스타일">xx 원룸</h4> -->
-    <p>{{ price1 }} 만원</p>
+    <!-- <p>{{ price1 }} 만원</p> -->
     <button @click="increase(0)">허위매물신고</button><span>신고수 : {{ 신고수[0] }}</span>
   </div>
   <div>
@@ -58,6 +60,15 @@ function 어쩌구(){
 
 어쩌구();
 
+import {apple, apple2} from './assets/oneroom.js';
+
+console.log(apple);
+console.log(apple2);
+
+import data from './assets/oneroom.js';
+
+console.log(data);
+
 export default {
   name: 'App',
   data() {
@@ -65,10 +76,11 @@ export default {
       price1 : 60,
       price2 : 70,
       //스타일 : 'color:blue',
-      products : ['역삼동원룸','천호동원룸','마포구원룸'],
       메뉴들 : ['Home','Shop','About'],
       신고수 : [0,0,0],
       모달창열렸니 : false,
+      products : ['역삼동원룸','천호동원룸','마포구원룸'],
+      원룸들 : data,
     }
   },
   methods : {
