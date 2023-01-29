@@ -14,8 +14,6 @@
     <!-- <a>About</a> -->
   </div>
 
-
-
     <!-- 
     <img alt="Vue logo" src="./assets/logo.png">
     <div v-for="(b,i) in products" :key="b">
@@ -27,6 +25,7 @@
 
   <!-- <input type="text" value="===================================">  -->
   
+  <!-- lesson6 homework v-for로 리스트 구현-->
   <div>
     <img src="./assets/room0.jpg" class="room-img">
     <h4>{{ 원룸들[0].title }}</h4>
@@ -36,6 +35,7 @@
     <!-- <p>{{ price1 }} 만원</p> -->
     <button @click="increase(0)">허위매물신고</button><span>신고수 : {{ 신고수[0] }}</span>
   </div>
+  
   <div>
     <img src="./assets/room1.jpg" class="room-img">
     <h4>{{products.at(1)}}</h4>
