@@ -26,27 +26,25 @@
   <!-- <input type="text" value="===================================">  -->
   
   <!-- lesson6 homework v-for로 리스트 구현-->
-  <div>
-    <img src="./assets/room0.jpg" class="room-img">
-    <h4>{{ 원룸들[0].title }}</h4>
-    <p>{{ 원룸들[0].price }}원</p>
+  <!-- <div> -->
+    <!-- <img src="./assets/room0.jpg" class="room-img"> -->
+    <!-- <h4>{{ 원룸들[0].title }}</h4> -->
+    <!-- <p>{{ 원룸들[0].price }}원</p> -->
+    <!-- <h4 @click="모달창열렸니 = true">{{products.at(0)}}</h4> -->
+    <!-- <h4 class="red" :style="스타일">xx 원룸</h4> -->
+    <!-- <p>{{ price1 }} 만원</p> -->
+    <!-- <button @click="increase(0)">허위매물신고</button><span>신고수 : {{ 신고수[0] }}</span> -->
+  <!-- </div> -->
+
+  <div v-for="(c,j) in 원룸들" :key="c">
+    <!-- <img v-for="(c) in data" :key="c" src="{{ c[0].image }}" class="room-img"> -->
+    <img :src=c.image class="room-img"> 
+    <h4>{{ j }}</h4>
+    <p>{{ c.price }}원</p>
     <!-- <h4 @click="모달창열렸니 = true">{{products.at(0)}}</h4> -->
     <!-- <h4 class="red" :style="스타일">xx 원룸</h4> -->
     <!-- <p>{{ price1 }} 만원</p> -->
     <button @click="increase(0)">허위매물신고</button><span>신고수 : {{ 신고수[0] }}</span>
-  </div>
-  
-  <div>
-    <img src="./assets/room1.jpg" class="room-img">
-    <h4>{{products.at(1)}}</h4>
-    <p>{{ price2 }} 만원</p>
-    <button @click="increase(1)">허위매물신고</button><span>신고수 : {{ 신고수[1] }}</span>
-  </div>
-  <div>
-    <img src="./assets/room2.jpg" class="room-img">
-    <h4>{{products.at(2)}}</h4>
-    <p>{{ price2 }} 만원</p>
-    <button @click="increase(2)">허위매물신고</button><span>신고수 : {{ 신고수[2] }}</span>
   </div>
 </template>
 
